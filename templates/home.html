@@ -1,0 +1,204 @@
+{% load static %}
+<html>
+<head>
+    <title>Home Page</title>
+      <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+      <script src="{% static 'js/script.js' %}"></script>
+      <style>
+        body {
+            font-family: 'Poppins', sans-serif;
+        }
+    </style>
+  </head>
+<body>
+<nav class="bg-white shadow">
+    <div class="max-w-7xl mx-auto flex justify-between items-center p-4">
+        <h1 class="text-xl font-bold">HopeHands Foundation</h1>
+
+        <ul class="hidden md:flex space-x-8">
+            <li><a href="/" class="hover:text-blue-600">Home</a></li>
+            <li><a href="/about/" class="hover:text-blue-600">About</a></li>
+            <li><a href="/causes/" class="hover:text-blue-600">Causes</a></li>
+            <li><a href="/donate/" class="hover:text-blue-600">Donate</a></li>
+            <li><a href="/contact/" class="hover:text-blue-600">Contact</a></li>
+        <button class="bg-blue-700 text-white px-4 py-2 rounded">
+            <a href="/donate/" class="hover:text-blue-600">Donate Now</a>
+        </button>
+        </ul>
+</div>
+</nav>
+
+<section class="relative">
+
+<img src="{% static 'images/home.PNG' %}" class="w-full h-[500px] object-cover">
+
+<div class="absolute inset-0 bg-black/40 flex justify-center items-center">
+
+<div class="text-center text-white">
+
+<h1 class="text-5xl font-bold">
+Together, We Can Change Lives
+</h1>
+
+<p class="mt-4 text-lg">
+Your kindness today can bring hope, health and happiness.
+</p>
+
+<div class="mt-8">
+
+<button class="bg-blue-700 px-6 py-3 rounded-lg hover:bg-blue-800">
+  <a href="/donate/" class="hover:text-blue-600">Donate Now</a>
+</button>
+
+<button class="bg-white text-black px-6 py-3 rounded-lg ml-4 hover:bg-gray-200">
+      <a href="/volunteer/" class="hover:text-blue-600">Become a Volunteer</a>
+</button>
+
+</div>
+
+</div>
+
+</div>
+
+</section>
+ <!--section 1-->
+    <div>
+        <h1 class="text-3xl text-center font-bold mt-10">Our Mission </h1>
+        <p class="text-center text-2xl mt-10 font-normal"> At HopeHands Foundation, our mission is to empower
+            communities
+            and transform lives through compassionate action <br>
+            and sustainable solutions. We are dedicated to providing essential resources, fostering education, and
+            promoting
+            well-<br>
+            being for those facing adversity. Together, we strive to build a brighter future, one hand at a time.</p>
+    </div>
+    <!--section 2-->
+    <h1 class="text-3xl text-center font-bold mt-10 ">Our Causes </h1>
+    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-5 mt-10 ml-10 mr-10">
+        <div>
+           <img src="{% static 'images/img1.png' %}" class="rounded-xl transition-transform duration-500 hover:scale-110" alt="edu">
+            <h3 class="text-xl mt-3 font-bold ">Education for children </h3>
+            <p class="text-sm text-gray-500 mt-2 leading-loose">Providing quality education and resources to <br>
+                underprivileged children, ensuring they have the <br> opportunity to succeed. </p>
+        </div>
+        <div>
+            <img src="{% static 'images/img2.png' %}" class="rounded-xl transition-transform duration-500 hover:scale-110" alt="health">
+            <h3 class="text-xl mt-3 font-bold ">Medicak Support </h3>
+            <p class="text-sm text-gray-500 mt-2 leading-loose">Offering medical assistance and healthcare <br> support
+                to those in need, ensuring access to <br> essential medical services. </p>
+        </div>
+        <div>
+            <img src="{% static 'images/img3.png' %}" class="rounded-xl transition-transform duration-500 hover:scale-110" alt="food">
+            <h3 class="text-xl mt-3 font-bold ">Food & Shelter</h3>
+            <p class="text-sm text-gray-500 mt-2 leading-loose">Providing food, shelter, and basic necessities to <br>
+                individuals and families facing hardship and <br> homelessness.</p>
+        </div>
+        <div>
+            <img src="{% static 'images/img4.png' %} " class="rounded-xl transition-transform duration-500 hover:scale-110" alt="relief">
+            <h3 class="text-xl mt-3 font-bold ">Disaster Relief</h3>
+            <p class="text-sm text-gray-500 mt-2 leading-loose">Responding swiftly to natural disasters and<br>providing
+                immediate relief and long-term <br>to affected communities.</p>
+        </div>
+    </div>
+    </div>
+    <div class="flex justify-center mt-15 gap-5">
+        <button class="px-15 py-1 font-bold bg-blue-900 text-white text-xl rounded-lg"><a href="/donate/" class="hover:text-blue-600">Donate</a></button>
+        <button class="px-15 py-1 font-bold bg-gray-200 text-black text-xl rounded-lg">  <a href="/volunteer/" class="hover:text-blue-600">Learn More</a></button>
+    </div>
+    <!-- section 3-->
+    <div>
+        <h1 class="text-3xl text-center font-bold mt-20">Impact Section</h1>
+    </div>
+
+    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-5 mt-10 ml-10 mr-10" >
+              <div class=" bg-gray-200 rounded-lg px-25 py-3 ">
+                <h2 class=" text-xl font-semibold mt-3">Lives Helped</h2>
+        <h2 class="text-2xl font-bold ">10,000+</h2>
+    </div>
+    <div class="bg-gray-200 rounded-lg  px-25 py-6">
+        <h2 class="text-xl font-semibold mt-3">Volunteers</h2>
+        <h2 class="text-2xl font-bold ">500+</h2>
+    </div>
+    <div class="bg-gray-200 rounded-lg  px-25 py-6">
+        <h2 class="text-xl font-semibold mt-3">Projects Completed</h2>
+        <h2 class="text-2xl font-bold ">120+</h2>
+    </div>
+    </div>
+    <!-- section 4-->
+    <div>
+        <h2 class="text-3xl font-bold text-center mt-20 ">Stories / Testimonials</h2>
+    </div>
+    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 p-5 gap-10 mt-10 ml-10 mr-10 ">
+        <div class=" border border-gray-500 rounded-lg px-5">
+            <div class="flex gap-3">
+              <img src="{% static 'images/img5.png' %}" class="rounded-full mt-5" alt="edu">
+                <h3 class="text-md mt-5 font-semibold ">Sophia Carter <br> <span class="font-light text-sm"> 2023-08-15
+                    </span> </h3>
+            </div>
+            <img src="{% static 'images/img8.png' %}" class="mt-3" alt="star">
+
+            <p class="mt-3 font-semiblod">"HopeHands Foundation has truly made a <br>
+                difference in my life. Their support helped<br>
+                me get back on my feet during a difficult <br> time." </p>
+                
+            <img src="{% static 'images/img9.png' %}" class="mt-2" alt="line">
+        </div>
+        <div class=" border border-gray-500 rounded-lg px-5">
+            <div class="flex gap-3">
+                
+                <img src="{% static 'images/img-6.png' %}" class="rounded-full mt-5" alt="edu">
+                <h3 class="text-md mt-5 font-semibold "> Ethan Bennett <br> <span class="font-light text-sm"> 2023-07-22
+                    </span> </h3>
+            </div>
+           
+            <img src=" {% static 'images/img8.png' %}" class="mt-3" alt="star">
+
+            <p class="mt-3 font-semiblod">"Volunteering with HopeHands has<br>
+                been an incredibly rewarding<br>
+                experience. Seeing the impact we <br> make is truly inspiring." </p>
+                
+            <img src=" {% static 'images/img10.png' %}" class="mt-2" alt="line">
+        </div>
+        <div class=" border border-gray-500 rounded-lg  px-5">
+            <div class="flex gap-3">
+                
+                <img src="{% static 'images/img-7.png' %}" class="rounded-full mt-5" alt="edu">
+                <h3 class="text-md mt-5 font-semibold ">Olivia Hayes <br> <span class="font-light text-sm"> 2023-06-10
+                    </span> </h3>
+            </div>
+            <img src="{% static 'images/img8.png' %}" class="mt-3" alt="star">
+
+            <p class="mt-3 font-semiblod">"The dedication and compassion of <br>
+                HopeHands Foundation are<br>
+                unmatched. They are a beacon of <br> hope for so many." </p>
+               
+            <img src="{% static 'images/img11.png' %}" class="mt-2" alt="line">
+        </div>
+
+    </div>
+    </div>
+<footer class="bg-gray-200 py-8">
+
+<div class="max-w-6xl mx-auto flex flex-wrap justify-between px-6">
+
+<a href="#">About Us</a>
+
+<a href="#">Programs</a>
+
+<a href="#">Volunteer</a>
+
+<a href="#">Donate</a>
+
+<a href="#">Contact</a>
+
+</div>
+<p class="flex justify-center mt-8">
+    <img src="{% static 'images/f.PNG' %}" alt="Image">
+</p>
+<p class="text-center text-gray-600 mt-8">
+© 2024 HopeHands Foundation. All Rights Reserved.
+</p>
+
+</footer>
+</body>
+</html>

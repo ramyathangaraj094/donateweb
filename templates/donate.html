@@ -1,0 +1,128 @@
+<html>
+<head>
+    {% load static %}
+    <title>About Page</title>
+      <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+       <style>
+        body {
+            font-family: 'Poppins', sans-serif;
+        }
+    </style>
+</head>
+<body>
+
+<nav class="bg-white shadow">
+    <div class="max-w-7xl mx-auto flex justify-between items-center p-4">
+        <h1 class="text-xl font-bold">HopeHands Foundation</h1>
+
+        <ul class="hidden md:flex space-x-8">
+            <li><a href="/" class="hover:text-blue-600">Home</a></li>
+            <li><a href="/about/" class="hover:text-blue-600">About</a></li>
+            <li><a href="/causes/" class="hover:text-blue-600">Causes</a></li>
+            <li><a href="/donate/" class="hover:text-blue-600">Donate</a></li>
+            <li><a href="/contact/" class="hover:text-blue-600">Contact</a></li>
+        <button class="bg-blue-700 text-white px-4 py-2 rounded">
+            <a href="/donate/" class="hover:text-blue-600">Donate Now</a>
+        </button>
+        </ul>
+</div>
+</nav>
+<section class="max-w-5xl mx-auto bg-white mt-10 p-8 rounded-lg shadow">
+
+    <h2 class="text-4xl font-bold mb-4">
+        Make a Difference Today
+    </h2>
+
+    <p class="text-gray-600 mb-8">
+        Your generous donation helps support communities in need.
+    </p>
+
+    <div class="grid md:grid-cols-2 gap-10">
+
+        <!-- Left -->
+        <div>
+
+            <h3 class="text-xl font-semibold mb-4">
+                Donor Information
+            </h3>
+
+           <form method="POST">
+    {% csrf_token %}
+
+    <input type="text"
+           name="name"
+           placeholder="Name"
+           class="w-full border rounded p-3 mb-1">
+
+    <p class="text-red-500 text-sm">{{ form.name.errors }}</p>
+
+    <input type="email"
+           name="email"
+           placeholder="Email"
+           class="w-full border rounded p-3 mb-1">
+
+    <p class="text-red-500 text-sm">{{ form.email.errors }}</p>
+
+    <textarea
+        name="address"
+        placeholder="Address"
+        class="w-full border rounded p-3 mb-1"></textarea>
+
+    <p class="text-red-500 text-sm">{{ form.address.errors }}</p>
+
+    <select name="amount" class="w-full border rounded p-3 mb-1">
+        <option value="">Select Amount</option>
+        <option value="500">₹500</option>
+        <option value="1000">₹1000</option>
+        <option value="2000">₹2000</option>
+    </select>
+
+    <p class="text-red-500 text-sm">{{ form.amount.errors }}</p>
+
+    <select name="cause" class="w-full border rounded p-3 mb-1">
+        <option value="">Select a Cause</option>
+        <option value="Education">Education</option>
+        <option value="Food">Food</option>
+        <option value="Health">Health</option>
+    </select>
+
+    <p class="text-red-500 text-sm">{{ form.cause.errors }}</p>
+
+    <button type="submit"
+            class="bg-blue-700 text-white px-8 py-3 rounded-lg mt-5">
+        Donate Securely
+    </button>
+</form>
+
+        </div>
+
+    </div>
+
+</section>
+
+<!-- Footer -->
+<footer class="bg-gray-200 py-8">
+
+<div class="max-w-6xl mx-auto flex flex-wrap justify-between px-6">
+
+<a href="#">About Us</a>
+
+<a href="#">Programs</a>
+
+<a href="#">Volunteer</a>
+
+<a href="#">Donate</a>
+
+<a href="#">Contact</a>
+
+</div>
+<p class="flex justify-center mt-8">
+    <img src="{% static 'images/f.PNG' %}" alt="Image">
+</p>
+<p class="text-center text-gray-600 mt-8">
+© 2024 HopeHands Foundation. All Rights Reserved.
+</p>
+
+</footer>
+</body>
+</html>

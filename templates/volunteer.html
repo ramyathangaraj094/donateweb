@@ -1,0 +1,195 @@
+{% load static %}
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Volunteer Page</title>
+
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+ <style>
+        body {
+            font-family: 'Poppins', sans-serif;
+        }
+    </style>
+</head>
+
+<body class="bg-gray-100">
+
+<!-- Navbar -->
+<nav class="bg-white shadow">
+    <div class="max-w-7xl mx-auto flex justify-between items-center p-4">
+        <h1 class="text-xl font-bold">HopeHands Foundation</h1>
+
+        <ul class="hidden md:flex space-x-8">
+            <li><a href="/" class="hover:text-blue-600">Home</a></li>
+            <li><a href="/about/" class="hover:text-blue-600">About</a></li>
+            <li><a href="/causes/" class="hover:text-blue-600">Causes</a></li>
+            <li><a href="/donate/" class="hover:text-blue-600">Donate</a></li>
+            <li><a href="/contact/" class="hover:text-blue-600">Contact</a></li>
+        <button class="bg-blue-700 text-white px-4 py-2 rounded">
+            <a href="/donate/" class="hover:text-blue-600">Donate Now</a>
+        </button>
+        </ul>
+</div>
+</nav>
+
+<!-- Hero Section -->
+<section class="max-w-7xl mx-auto mt-8">
+
+<div class="relative">
+
+<img src="{% static 'images/v1.PNG'%}" class="rounded-lg w-full h-[800px] object-cover">
+
+<div class="absolute inset-0 flex flex-col justify-center items-center text-white bg-black/30">
+
+<h2 class="text-5xl font-bold">
+Be the Change. Become a Volunteer.
+</h2>
+
+<p class="mt-4">
+Use your skills and compassion to help others.
+</p>
+
+<button class="mt-8 bg-blue-700 px-6 py-3 rounded-lg">
+Join as a Volunteer
+</button>
+
+</div>
+
+</div>
+
+</section>
+
+<!-- Introduction -->
+
+<section class="max-w-7xl mx-auto mt-12">
+
+<h2 class="text-3xl font-bold">
+Volunteer Program Introduction
+</h2>
+
+<p class="mt-4 text-gray-600">
+At HopeHands Foundation, volunteers are the heart of everything we do.
+</p>
+
+</section>
+
+<!-- Volunteer Image -->
+
+<section class="max-w-7xl mx-auto mt-10">
+
+<img src="{% static 'images/v2.PNG'%}" class="rounded-lg w-full h-[450px] object-cover">
+</section>
+
+<!-- Help Cards -->
+
+<section class="max-w-7xl mx-auto mt-10">
+
+<h2 class="text-2xl font-bold mb-6">
+Ways You Can Help
+</h2>
+
+<div class="grid md:grid-cols-5 gap-4">
+
+<div class="border-2 border-blue-600 rounded-lg p-5 flex items-center gap-3 text-blue-600">
+    <i class="fa-solid fa-graduation-cap text-2xl"></i>
+    <span class="font-semibold">Education <br>Support</span>
+</div>
+
+<div class="border-2 border-green-600 rounded-lg p-5 flex items-center gap-3 text-green-600">
+    <i class="fa-solid fa-hand-holding-medical text-2xl"></i>
+    <span class="font-semibold">Medical <br> Assistance</span>
+</div>
+
+<div class="border-2 border-yellow-500 rounded-lg p-5 flex items-center gap-3 text-yellow-500">
+    <i class="fa-solid fa-bowl-food text-2xl"></i>
+    <span class="font-semibold">
+        Food <br>Distribution
+    </span>
+</div>
+
+<div class="border-2 border-fuchsia-600 rounded-lg p-5 flex items-center gap-3 text-fuchsia-600">
+    <i class="fa-solid fa-calendar-check text-2xl"></i>
+    <span class="font-semibold">
+        Event <br> Coordination
+    </span>
+</div>
+
+<div class="border-2 border-sky-600 rounded-lg p-5 flex items-center gap-3 text-sky-600">
+    <i class="fa-solid fa-laptop-code text-2xl"></i>
+    <span class="font-semibold">
+        Online <br>Volunteering
+    </span>
+</div>
+
+</div>
+
+</section>
+
+<!-- Volunteer Form -->
+
+<section class="max-w-4xl mx-auto mt-12">
+
+<h2 class="text-3xl font-bold mb-8">
+Join Our Volunteer Community
+</h2>
+
+ <form method="POST" class="space-y-5">
+
+        {% csrf_token %}
+
+        {{ form.full_name }}
+        <p class="text-red-600 text-sm">{{ form.full_name.errors }}</p>
+
+        {{ form.email }}
+        <p class="text-red-600 text-sm">{{ form.email.errors }}</p>
+
+        {{ form.phone }}
+        <p class="text-red-600 text-sm">{{ form.phone.errors }}</p>
+
+        {{ form.area }}
+        <p class="text-red-600 text-sm">{{ form.area.errors }}</p>
+
+        {{ form.availability }}
+        <p class="text-red-600 text-sm">{{ form.availability.errors }}</p>
+
+        <button
+            type="submit"
+            class="w-full bg-blue-700 hover:bg-blue-800 text-white py-3 rounded-lg font-semibold">
+            Become a Volunteer
+        </button>
+
+    </form>
+
+
+</section>
+
+<!-- Footer -->
+
+<footer class="bg-gray-200 mt-20 py-10">
+
+<div class="max-w-6xl mx-auto flex flex-wrap justify-between px-6">
+
+<a href="#">About Us</a>
+
+<a href="#">Programs</a>
+
+<a href="#">Volunteer</a>
+
+<a href="#">Donate</a>
+
+<a href="#">Contact</a>
+
+</div>
+<p class="flex justify-center mt-8">
+    <img src="{% static 'images/f.PNG' %}" alt="Image">
+</p>
+<p class="text-center mt-8">
+© 2024 HopeHands Foundation
+</p>
+
+</footer>
+
+</body>
+</html>

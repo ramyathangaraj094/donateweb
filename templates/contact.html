@@ -1,0 +1,134 @@
+{% load static %}
+<html>
+<head>
+    <title>Contact Page</title>
+     <script src="https://cdn.tailwindcss.com"></script>
+      <style>
+        body {
+            font-family: 'Poppins', sans-serif;
+        }
+    </style>
+</head>
+<body>
+<nav class="bg-white shadow">
+    <div class="max-w-7xl mx-auto flex justify-between items-center p-4">
+        <h1 class="text-xl font-bold">HopeHands Foundation</h1>
+
+        <ul class="hidden md:flex space-x-8">
+            <li><a href="/" class="hover:text-blue-600">Home</a></li>
+            <li><a href="/about/" class="hover:text-blue-600">About</a></li>
+            <li><a href="/causes/" class="hover:text-blue-600">Causes</a></li>
+            <li><a href="/donate/" class="hover:text-blue-600">Donate</a></li>
+            <li><a href="/contact/" class="hover:text-blue-600">Contact</a></li>
+        <button class="bg-blue-700 text-white px-4 py-2 rounded">
+            <a href="/donate/" class="hover:text-blue-600">Donate Now</a>
+        </button>
+        </ul>
+</div>
+</nav>
+
+<br>
+<section class="py-12 bg-white">
+
+<h2 class="text-3xl font-bold text-center mb-10">
+Get in Touch With Us
+</h2>
+
+<div class="max-w-5xl mx-auto grid md:grid-cols-3 gap-6">
+
+<div class="border rounded-lg p-5 shadow text-center">
+
+<p class="font-semibold mt-2">
+📧 support@hopehands.org
+</p>
+</div>
+
+<div class="border rounded-lg p-5 shadow text-center">
+
+<p class="font-semibold mt-2">
+📞 +91 98765 43210
+</p>
+</div>
+
+<div class="border rounded-lg p-5 shadow text-center">
+ 
+<p class="font-semibold mt-2">
+ 📍 Chennai, India
+</p>
+</div>
+
+</div>
+
+</section>
+
+<!-- Google Map -->
+
+<div class="w-full">
+<iframe
+class="w-full h-[450px]"
+src="https://maps.google.com/maps?q=Chennai&t=&z=13&ie=UTF8&iwloc=&output=embed">
+</iframe>
+</div>
+
+<!-- Support -->
+
+<section class="bg-white py-10">
+
+<div class="max-w-6xl mx-auto px-6">
+
+<h2 class="text-2xl font-bold">
+Support & Trust
+</h2>
+
+<p class="text-gray-600 mt-3">
+We believe in transparency, trust and people-powered change.
+Every volunteer helps us move closer to a better future.
+</p>
+
+<div class="flex flex-wrap gap-4 mt-8">
+
+<span class="border border-green-500 text-green-600 px-5 py-2 rounded">
+✔️ Trusted by Volunteers
+</span>
+
+<span class="border border-blue-500 text-blue-600 px-5 py-2 rounded">
+Community Support
+</span>
+
+<span class="border border-red-500 text-red-600 px-5 py-2 rounded">
+❤️ Making a Difference
+</span>
+
+</div>
+
+</div>
+
+</section>
+
+<!-- Footer -->
+
+<footer class="bg-gray-200 py-8">
+
+<div class="max-w-6xl mx-auto flex flex-wrap justify-between px-6">
+
+<a href="#">About Us</a>
+
+<a href="#">Programs</a>
+
+<a href="#">Volunteer</a>
+
+<a href="#">Donate</a>
+
+<a href="#">Contact</a>
+
+</div>
+<p class="flex justify-center mt-8">
+    <img src="{% static 'images/f.PNG' %}" alt="Image">
+</p>
+<p class="text-center text-gray-600 mt-8">
+© 2024 HopeHands Foundation. All Rights Reserved.
+</p>
+
+</footer>
+</body>
+</html>

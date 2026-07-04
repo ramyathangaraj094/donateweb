@@ -1,0 +1,141 @@
+{% load static %}
+<html>
+<head>
+    <title>About Page</title>
+      <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+       <style>
+        body {
+            font-family: 'Poppins', sans-serif;
+        }
+    </style>
+</head>
+<body>
+<nav class="bg-white shadow">
+    <div class="max-w-7xl mx-auto flex justify-between items-center p-4">
+        <h1 class="text-xl font-bold">HopeHands Foundation</h1>
+
+        <ul class="hidden md:flex space-x-8">
+            <li><a href="/" class="hover:text-blue-600">Home</a></li>
+            <li><a href="/about/" class="hover:text-blue-600">About</a></li>
+            <li><a href="/causes/" class="hover:text-blue-600">Causes</a></li>
+            <li><a href="/donate/" class="hover:text-blue-600">Donate</a></li>
+            <li><a href="/contact/" class="hover:text-blue-600">Contact</a></li>
+        <button class="bg-blue-700 text-white px-4 py-2 rounded">
+            <a href="/donate/" class="hover:text-blue-600">Donate Now</a>
+        </button>
+        </ul>
+</div>
+</nav>
+<!--section 1-->
+    <div>
+        <h1 class="text-2xl font-bold text-center mt-10">About Us</h1>
+        <h1 class="text-2xl font-semibold text-center mt-10">Our Story</h1>
+        <p class="text-center mt-5 text-xl">HopeHands Foundation was established in 2010 by Sarah Johnson and David Lee,
+            two individuals driven by a
+            shared vision of creating a <br>
+            world where every person has access to basic necessities and opportunities for a better life. Their journey
+            began with a small community<br>
+            project, addressing immediate needs such as food and shelter for underprivileged families. Over the years,
+            their dedication and the <br>
+            support of countless volunteers and donors have transformed HopeHands into a leading organization, impacting
+            thousands of lives<br>
+            across various communities.
+        </p>
+    </div>
+<section class="max-w-6xl mx-auto px-6">
+    
+<img src="{% static 'images/about.PNG' %}"  class="rounded-xl shadow-lg w-full transition-transform duration-500 hover:scale-110"  alt="about">
+</section>
+    <!--section 2-->
+    <div>
+        <h1 class="text-2xl font-semibold text-center mt-10">Vision & Mission</h1>
+        <p class="text-center mt-5 text-xl">Our vision is to build a world where every individual has the opportunity to
+            thrive, free from poverty and injustice. We strive to empower<br>
+            communities, ensuring access to essential resources and fostering sustainable development. Our mission is to
+            mobilize resources, engage <br>
+            volunteers, and collaborate with partners to deliver impactful programs that address the root causes of
+            poverty and inequality. We are <br>
+            committed to transparency, accountability, and the ethical use of all resources entrusted to us.
+        </p>
+    </div>
+    <div>
+        <h1 class="text-2xl font-semibold text-center mt-10">Our Values</h1>
+    </div>
+    <div  class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-30 mt-10 ml-15 mr-15">
+        <div class="border border-gray-500 px-5 py-5 rounded-lg ">
+            
+            <img src="{% static 'images/img12.png'%}" class="transition-transform duration-500 hover:scale-110" alt="">
+            <h1 class="font-bold mt-3 text-xl">Compassion</h1>
+            <p class="mt-3">We approach our work with empathy<br>
+                and understanding recognizing the<br>
+                inherent dignity of every individual.
+            </p>
+        </div>
+        <div class="border border-gray-500 px-5 py-5 rounded-lg ">
+           
+            <img src="{% static 'images/img13.png' %}" class="transition-transform duration-500 hover:scale-110" alt="">
+            <h1 class="font-bold mt-3 text-xl">Collaboration</h1>
+            <p class="mt-3">We believe in the power of partnerships <br>
+                and collective action to achieve lasting <br>
+                change.
+            </p>
+        </div>
+        <div class="border border-gray-500  px-5 py-5 rounded-lg">
+            
+            <img src="{% static 'images/img14.png' %}" class="transition-transform duration-500 hover:scale-110" alt="">
+            <h1 class="font-bold mt-3 text-xl">Integrity</h1>
+            <p class="mt-3">We uphold the highest standards of <br>
+                honesty and ethical conduct in all our<br>
+                endeavors.
+            </p>
+        </div>
+    </div>
+<div>
+     <h1 class="text-2xl font-semibold text-center mt-10">Our Team</h1>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-30 mt-20 ml-15 mr-15">
+    <div>
+        
+        <img src="{% static 'images/img15.png' %}" class="transition-transform duration-500 hover:scale-110" alt="">
+        <h1 class="font-bold mt-3 text-xl ml-15">Sarah Johnson</h1>
+        <p class="ml-10  text-gray-500">Co-Founder & Executive </p>
+            <p class="ml-23  text-gray-500"> Director </p>
+    </div>
+    <div>
+        <img src="{% static 'images/img-16.png' %}" class="transition-transform duration-500 hover:scale-110" alt="">
+        <h1  class="font-bold mt-3 text-xl ml-20">David Lee</h1>
+        <p class="ml-10 text-gray-500">Co-Founder & Program</p>
+            <p class="ml-23  text-gray-500"> Director </p>
+    </div>
+    <div>
+        <img src="{% static 'images/img-17.png' %}" class="transition-transform duration-500 hover:scale-110" alt="">
+        <h1 class="font-bold mt-3 text-xl ml-20">Emily Chen</h1>
+        <p class="ml-13  text-gray-500"> Volunteer Coordinator </p>
+    </div>
+</div><br><br>
+<footer class="bg-gray-200 py-8">
+
+<div class="max-w-6xl mx-auto flex flex-wrap justify-between px-6">
+
+<a href="#">About Us</a>
+
+<a href="#">Programs</a>
+
+<a href="#">Volunteer</a>
+
+<a href="#">Donate</a>
+
+<a href="#">Contact</a>
+
+</div>
+<p class="flex justify-center mt-8">
+    <img src="{% static 'images/f.PNG' %}" alt="Image">
+</p>
+<p class="text-center text-gray-600 mt-8">
+© 2024 HopeHands Foundation. All Rights Reserved.
+</p>
+
+</footer>
+
+</body>
+</html>
