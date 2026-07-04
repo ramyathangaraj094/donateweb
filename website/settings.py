@@ -120,11 +120,9 @@ USE_TZ = True
 BASE_DIR = Path(__file__).resolve().parent.parent
 
 STATIC_URL = 'static/'
-
-STATIC_ROOT = BASE_DIR / "staticfiles"
-
-MEDIA_URL = "/media/"
-MEDIA_ROOT = BASE_DIR / "media"
+STATICFILES_DIRS=[os.path.join(BASE_DIR), 'static']
+MEDIA_ROOT = os.path.join(BASE_DIR, 'static/images')
+MEDIA_URL = "/images/"
 
 
 
